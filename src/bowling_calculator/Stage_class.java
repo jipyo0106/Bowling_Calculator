@@ -65,7 +65,9 @@ class Stage_class_test {
 			if(sc_1 + sc_1_2 > 10)
 			{
 				System.out.println("잘못된 값 입력");
+				continue;
 			}
+			break;
 		}
 
 		//sc_2
@@ -86,7 +88,9 @@ class Stage_class_test {
 			if(sc_2 + sc_2_2 > 10)
 			{
 				System.out.println("잘못된 값 입력");
+				continue;
 			}
+			break;
 		}
 
 		//sc_3
@@ -107,7 +111,9 @@ class Stage_class_test {
 			if(sc_3 + sc_3_2 > 10)
 			{
 				System.out.println("잘못된 값 입력");
+				continue;
 			}
+			break;
 		}
 
 		if(sc_1 == STRIKE)	//strike
@@ -157,7 +163,9 @@ class Stage_class_test {
 			if(sc_4 + sc_4_2 > 10)
 			{
 				System.out.println("잘못된 값 입력");
+				continue;
 			}
+			break;
 		}
 
 		if(sc_2 == STRIKE)
@@ -207,7 +215,9 @@ class Stage_class_test {
 			if(sc_5 + sc_5_2 > 10)
 			{
 				System.out.println("잘못된 값 입력");
+				continue;
 			}
+			break;
 		}
 
 		if(sc_3 == STRIKE)
@@ -250,14 +260,16 @@ class Stage_class_test {
 		}while(sc_6 > 10);
 
 		//sc_6_2
-		while(sc_6 + sc_6_2 > 10)
+		while(sc_6 + sc_6_2 < 10)
 		{
 			System.out.println("spare 6");
 			sc_6_2 = sc.nextInt();
-			if(sc_6 + sc_6_2 < 10)
+			if(sc_6 + sc_6_2 > 10)
 			{
 				System.out.println("잘못된 값 입력");
+				continue;
 			}
+			break;
 		}
 
 		if(sc_4 == STRIKE)
@@ -307,7 +319,9 @@ class Stage_class_test {
 			if(sc_7 + sc_7_2 > 10)
 			{
 				System.out.println("잘못된 값 입력");
+				continue;
 			}
+			break;
 		}
 
 		if(sc_5 == STRIKE)
@@ -323,7 +337,6 @@ class Stage_class_test {
 		}
 		else	//not strike
 		{
-
 			if(pin_rest == (sc_5 + sc_5_2))	//spare
 			{
 				score_5 = (sc_5 + sc_5_2) + sc_6;
@@ -354,12 +367,18 @@ class Stage_class_test {
 		//sc_8_2
 		while(sc_8 + sc_8_2 < 10)
 		{
-			System.out.println("spare 8");
-			sc_8_2 = sc.nextInt();
-			if(sc_8 + sc_8_2 > 10)
+			while(true)
 			{
-				System.out.println("잘못된 값 입력");
+				System.out.println("spare 8");
+				sc_8_2 = sc.nextInt();
+				if(sc_8 + sc_8_2 > 10)
+				{
+					System.out.println("잘못된 값 입력");
+					continue;
+				}
+				break;
 			}
+			break;
 		}
 
 		if(sc_6 == STRIKE)
@@ -410,7 +429,9 @@ class Stage_class_test {
 			if(sc_9 + sc_9_2 > 10)
 			{
 				System.out.println("잘못된 값 입력");
+				continue;
 			}
+			break;
 		}	
 
 		if(sc_7 == STRIKE)
@@ -454,7 +475,7 @@ class Stage_class_test {
 			}
 			System.out.println("잘못된 값 입력");
 		}
-		
+
 		if(sc_8 == STRIKE)
 		{
 			if(sc_9 == STRIKE)
@@ -468,7 +489,7 @@ class Stage_class_test {
 		}
 		else	//not strike
 		{
-			if(pin_rest <= sc_8_2)	//spare
+			if(pin_rest == (sc_8 + sc_8_2))	//spare
 			{
 				score_8 = (sc_8 + sc_8_2) + sc_9;
 			}
@@ -551,14 +572,14 @@ class Stage_class_test {
 				break;
 			}
 		}
-
+		
 		if(sc_9 == STRIKE)
 		{
 			score_9 = sc_9 + sc_10 + sc_11;
 		}
 		else		//not strike
 		{
-			if(pin_rest <= sc_9_2)	//spare
+			if(pin_rest == (sc_7 + sc_7_2))	//spare
 			{
 				score_9 = (sc_9 + sc_9_2) + sc_10;
 			}
@@ -568,17 +589,21 @@ class Stage_class_test {
 			}
 
 		}
-
-		System.out.printf("\tscore 9: %d\n", score_9);
-		System.out.println();
-
-
+		
 		score_10 = sc_10;
 		score_bonus_11 = sc_10_2;
 		score_bonus_12 = sc_11;
+		
+		System.out.printf("\tscore 9: %d\n", score_9);
+		System.out.printf("\tscore 10: %d\n", score_10);
+		System.out.printf("\tscore spare 11: %d\n", score_bonus_11);
+		System.out.printf("\tscore bonus 12: %d\n", score_bonus_12);
+		System.out.println();
+
+
 
 	}
-	
+
 	void all_score()
 	{
 		Stage_class_test sct = new Stage_class_test();
@@ -586,14 +611,14 @@ class Stage_class_test {
 				score_7 + score_8 + score_9 + score_10 + score_bonus_11 + score_bonus_12;
 		System.out.printf("\tall score: %d", all_score);
 	}
-	
+
 	void all_pin()
 	{
 		Stage_class_test sct = new Stage_class_test();
 		int all_pin = sc_1 + sc_2 + sc_3 + sc_4 + sc_5 + sc_6
 				+ sc_7 + sc_8 + sc_9 + sc_10 + sc_10_2 + sc_11;
 		System.out.printf("\tall pin: %d\n", all_pin);
-		
+
 	}
 
 }
