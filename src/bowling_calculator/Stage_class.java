@@ -60,12 +60,16 @@ class Stage_class_test {
 		//sc_1_2
 		while(sc_1 + sc_1_2 < 10)
 		{
-			System.out.println("spare 1");
-			sc_1_2 = sc.nextInt();
-			if(sc_1 + sc_1_2 > 10)
+			while(true)
 			{
-				System.out.println("잘못된 값 입력");
-				continue;
+				System.out.println("spare 1");
+				sc_1_2 = sc.nextInt();
+				if(sc_1 + sc_1_2 > 10)
+				{
+					System.out.println("잘못된 값 입력");
+					continue;
+				}
+				break;
 			}
 			break;
 		}
@@ -83,12 +87,16 @@ class Stage_class_test {
 		//sc_2_2
 		while(sc_2 + sc_2_2 < 10)
 		{
-			System.out.println("spare 2");
-			sc_2_2 = sc.nextInt();
-			if(sc_2 + sc_2_2 > 10)
+			while(true)
 			{
-				System.out.println("잘못된 값 입력");
-				continue;
+				System.out.println("spare 2");
+				sc_2_2 = sc.nextInt();
+				if(sc_2 + sc_2_2 > 10)
+				{
+					System.out.println("잘못된 값 입력");
+					continue;
+				}
+				break;
 			}
 			break;
 		}
@@ -106,12 +114,16 @@ class Stage_class_test {
 		//sc_3_2
 		while(sc_3 + sc_3_2 < 10)
 		{
-			System.out.println("spare 3");
-			sc_3_2 = sc.nextInt();
-			if(sc_3 + sc_3_2 > 10)
+			while(true)
 			{
-				System.out.println("잘못된 값 입력");
-				continue;
+				System.out.println("spare 3");
+				sc_3_2 = sc.nextInt();
+				if(sc_3 + sc_3_2 > 10)
+				{
+					System.out.println("잘못된 값 입력");
+					continue;
+				}
+				break;
 			}
 			break;
 		}
@@ -155,15 +167,19 @@ class Stage_class_test {
 			}
 		}while(sc_4 > 10);
 
-		//sc_4
+		//sc_4_2
 		while(sc_4 + sc_4_2 < 10)
 		{
-			System.out.println("spare 4");
-			sc_4_2 = sc.nextInt();
-			if(sc_4 + sc_4_2 > 10)
+			while(true)
 			{
-				System.out.println("잘못된 값 입력");
-				continue;
+				System.out.println("spare 4");
+				sc_4_2 = sc.nextInt();
+				if(sc_4 + sc_4_2 > 10)
+				{
+					System.out.println("잘못된 값 입력");
+					continue;
+				}
+				break;
 			}
 			break;
 		}
@@ -210,12 +226,16 @@ class Stage_class_test {
 		//sc_5_2
 		while(sc_5 + sc_5_2 < 10)
 		{
-			System.out.println("spare 5");
-			sc_5_2 = sc.nextInt();
-			if(sc_5 + sc_5_2 > 10)
+			while(true)
 			{
-				System.out.println("잘못된 값 입력");
-				continue;
+				System.out.println("spare 5");
+				sc_5_2 = sc.nextInt();
+				if(sc_5 + sc_5_2 > 10)
+				{
+					System.out.println("잘못된 값 입력");
+					continue;
+				}
+				break;
 			}
 			break;
 		}
@@ -262,12 +282,16 @@ class Stage_class_test {
 		//sc_6_2
 		while(sc_6 + sc_6_2 < 10)
 		{
-			System.out.println("spare 6");
-			sc_6_2 = sc.nextInt();
-			if(sc_6 + sc_6_2 > 10)
+			while(true)
 			{
-				System.out.println("잘못된 값 입력");
-				continue;
+				System.out.println("spare 6");
+				sc_6_2 = sc.nextInt();
+				if(sc_6 + sc_6_2 > 10)
+				{
+					System.out.println("잘못된 값 입력");
+					continue;
+				}
+				break;
 			}
 			break;
 		}
@@ -314,12 +338,16 @@ class Stage_class_test {
 		//sc_7_2
 		while(sc_7 + sc_7_2 < 10)
 		{
-			System.out.println("spare 7");
-			sc_7_2 = sc.nextInt();
-			if(sc_7 + sc_7_2 > 10)
+			while(true)
 			{
-				System.out.println("잘못된 값 입력");
-				continue;
+				System.out.println("spare 7");
+				sc_7_2 = sc.nextInt();
+				if(sc_7 + sc_7_2 > 10)
+				{
+					System.out.println("잘못된 값 입력");
+					continue;
+				}
+				break;
 			}
 			break;
 		}
@@ -424,12 +452,16 @@ class Stage_class_test {
 		//sc_9_2
 		while(sc_9 + sc_9_2 < 10)
 		{
-			System.out.println("spare 9");
-			sc_9_2 = sc.nextInt();
-			if(sc_9 + sc_9_2 > 10)
+			while(true)
 			{
-				System.out.println("잘못된 값 입력");
-				continue;
+				System.out.println("spare 9");
+				sc_9_2 = sc.nextInt();
+				if(sc_9 + sc_9_2 > 10)
+				{
+					System.out.println("잘못된 값 입력");
+					continue;
+				}
+				break;
 			}
 			break;
 		}	
@@ -510,7 +542,7 @@ class Stage_class_test {
 			sc_10_2 = sc.nextInt();
 			if(sc_10 == STRIKE)	//strike
 			{
-				if(sc_10_2 > 0 && sc_10_2 <= 10)
+				if(sc_10_2 >= 0 && sc_10_2 <= 10)
 				{
 					while(true)
 					{
@@ -560,19 +592,21 @@ class Stage_class_test {
 					}
 					else if(sc_10_2 >= 0 && (sc_10 + sc_10_2) < 10)	//fail spare
 					{
-						//System.out.println("프로그램 종료");
+						System.out.println("프로그램 종료");
 						break;
 					}
 					else
 					{
-						//System.out.println("잘못된 값 입력");
+						System.out.println("잘못된 값 입력");
+						sc_10_2 = sc.nextInt();
+						continue;
 					}
-					continue;
+					break;
 				}
-				break;
 			}
+			break;
 		}
-		
+
 		if(sc_9 == STRIKE)
 		{
 			score_9 = sc_9 + sc_10 + sc_11;
@@ -589,15 +623,16 @@ class Stage_class_test {
 			}
 
 		}
-		
+
 		score_10 = sc_10;
 		score_bonus_11 = sc_10_2;
 		score_bonus_12 = sc_11;
-		
+
 		System.out.printf("\tscore 9: %d\n", score_9);
 		System.out.printf("\tscore 10: %d\n", score_10);
 		System.out.printf("\tscore spare 11: %d\n", score_bonus_11);
 		System.out.printf("\tscore bonus 12: %d\n", score_bonus_12);
+
 		System.out.println();
 
 
